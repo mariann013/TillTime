@@ -1,18 +1,18 @@
+require_relative 'Products'
+
 class Checkout
 
   attr_reader :basket, :total
 
   def initialize
     @basket = []
-    @total = 0
-    @products = { 001 => 9.25,
-                  002 => 45,
-                  003 => 19.95}
+    @total  = 0
+    @products = Products.new
   end
 
   def scan(item)
     @basket << item
-    @total += @products[item]
+    @total  += @products.inventory[item]
   end
 
 end
