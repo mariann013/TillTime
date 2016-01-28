@@ -9,7 +9,7 @@ describe Checkout do
     end
 
     it 'should initialize with a total of 0' do
-      expect(subject.total).to eq 0
+      expect(subject.value).to eq 0
     end
 
   end
@@ -23,7 +23,7 @@ describe Checkout do
 
     it 'should update the total with scanned item' do
       subject.scan(001)
-      expect(subject.total).to eq 9.25
+      expect(subject.value).to eq 9.25
     end
   end
 

@@ -9,6 +9,7 @@ attr_accessor :inventory
   end
 
   def addItem(productcode, price)
+    raise 'Item code is already included in inventory' if @inventory.include?(productcode)
     @inventory.merge!(productcode => price)
   end
 
