@@ -14,6 +14,7 @@ attr_accessor :inventory
   end
 
   def deleteItem(productcode)
+    raise 'Item code is not included in inventory' if !@inventory.include?(productcode)
     @inventory.delete(productcode)
   end
 
