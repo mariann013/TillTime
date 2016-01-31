@@ -37,4 +37,28 @@ describe Checkout do
       expect(subject.total).to eq 17
     end
   end
+
+  context 'test data' do
+    it 'test case 1' do
+      subject.scan(001)
+      subject.scan(002)
+      subject.scan(003)
+      expect(subject.total).to eq 66.78
+    end
+
+    it 'test case 2' do
+      subject.scan(001)
+      subject.scan(003)
+      subject.scan(001)
+      expect(subject.total).to eq 36.95
+    end
+
+    it 'test case 3' do
+      subject.scan(001)
+      subject.scan(002)
+      subject.scan(001)
+      subject.scan(003)
+      expect(subject.total).to eq 73.76
+    end
+  end
 end

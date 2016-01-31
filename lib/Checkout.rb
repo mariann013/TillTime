@@ -18,8 +18,8 @@ class Checkout
   end
 
   def total
-    @value = @rules.ruleOne(value)
-    @rules.ruleTwo(value, basket)
+    @value = @rules.ruleOne(value, basket)
+    @rules.ruleTwo(value)
   end
 
 end
