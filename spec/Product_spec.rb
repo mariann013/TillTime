@@ -1,6 +1,6 @@
-require 'Products.rb'
+require 'Product.rb'
 
-describe Products do
+describe Product do
 
     it 'should initialize with the sample products' do
       expect(subject.inventory).to eq({ 001 => 9.25, 002 => 45, 003 => 19.95 })

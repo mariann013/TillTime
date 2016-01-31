@@ -1,4 +1,4 @@
-class Products
+class Product
 
 attr_accessor :inventory
 
